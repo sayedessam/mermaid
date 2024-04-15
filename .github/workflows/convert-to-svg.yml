@@ -58,7 +58,7 @@ jobs:
     environment:
      name: github-pages
      url: ${{ steps.deployment.outputs.page_url }}
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     needs: build
     steps:
      - name: Test
@@ -66,4 +66,3 @@ jobs:
      - name: Deplay to Github Pages
        id: deployment
        uses: actions/deploy-pages@v1
-      uses: actions/deploy--pagespages@v1
